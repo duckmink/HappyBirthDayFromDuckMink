@@ -42,9 +42,49 @@
         </div>
     </section>
 
+    <section id="arrow">
+        <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+    </section>
+
+    <section id="box">
+        <div id="power">
+            <div class="power-switch">
+                <input type="checkbox" />
+                <div class="button">
+                    <svg class="power-off">
+                    <use xlink:href="#line" class="line" />
+                    <use xlink:href="#circle" class="circle" />
+                  </svg>
+                    <svg class="power-on">
+                    <use xlink:href="#line" class="line" />
+                    <use xlink:href="#circle" class="circle" />
+                  </svg>
+                </div>
+            </div>
+
+            <!-- SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="line">
+                  <line x1="75" y1="34" x2="75" y2="58"/>
+                </symbol>
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="circle">
+                  <circle cx="75" cy="80" r="35"/>
+                </symbol>
+              </svg>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h1>Are you treating me as a light switch?<br>Cuz you turn me on everytime you enter the room.</h1>
+            </div>
+        </div>
+    </section>
 
 
-    <div class="bg_heart"></div>
+
 
     <script src="./assets/Script/Script.js"></script>
 </body>
