@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Bad+Script);
+body {
+    background-color: #333b46;
+    font-family: 'Helvetica Rounded', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
+    color: #fff;
+}
+
 #love_heart {
     height: 300px;
     h1 {
@@ -158,12 +164,6 @@
             opacity: 0
         }
     }
-}
-
-body {
-    background-color: #333b46;
-    font-family: 'Helvetica Rounded', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
-    color: #fff;
 }
 
 #switch {
