@@ -877,4 +877,80 @@ body {
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */
 }
+
+#ghost {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 100px 0;
+}
+
+#ghost .container {
+  text-align: center;
+}
+
+#ghost .ghost {
+  -webkit-animation: float 3s ease-out infinite;
+          animation: float 3s ease-out infinite;
+}
+
+@-webkit-keyframes float {
+  50% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+}
+
+@keyframes float {
+  50% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+}
+
+#ghost .shadowFrame {
+  width: 130px;
+  margin: 15px 0;
+}
+
+#ghost .shadow {
+  -webkit-animation: shrink 3s ease-out infinite;
+          animation: shrink 3s ease-out infinite;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+#ghost .shadow ellipse {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+@-webkit-keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
 /*# sourceMappingURL=Style.css.map */
