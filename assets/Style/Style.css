@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Bad+Script);
+#love_heart {
+  height: 300px;
+}
+
 #love_heart h1 {
   position: relative;
   top: 180px;
@@ -308,12 +312,19 @@ body {
   color: #fff;
 }
 
+#switch {
+  position: relative;
+  height: 300px;
+}
+
 #switch .toggleWrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   overflow: hidden;
-  padding: 0 200px;
+  padding: 150px;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
 }
@@ -321,13 +332,6 @@ body {
 #switch .toggleWrapper input {
   position: absolute;
   left: -99em;
-}
-
-@media screen and (max-width: 500px) {
-  #switch .toggleWrapper {
-    margin: 100px 0;
-    padding: 100px;
-  }
 }
 
 #switch .toggle {
@@ -570,8 +574,7 @@ body {
 
 #box {
   position: relative;
-  margin-top: 200px;
-  margin-bottom: 500px;
+  margin: 100px 0;
 }
 
 #box #power {
@@ -614,25 +617,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-}
-
-#box #power .power-switch .button:after {
-  content: "";
-  width: 500%;
-  height: 500%;
-  position: absolute;
-  background: radial-gradient(circle closest-side, var(--color-invert), transparent);
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
-  opacity: 0;
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
-  -webkit-transform: perspective(1px) translateZ(0);
-          transform: perspective(1px) translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 #box #power .power-switch .button .power-on,
@@ -691,18 +675,6 @@ body {
   z-index: 2;
   cursor: pointer;
   opacity: 0;
-}
-
-#box #power .power-switch input:checked + .button:after {
-  opacity: 0.15;
-  -webkit-transform: scale(2) perspective(1px) translateZ(0);
-          transform: scale(2) perspective(1px) translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: opacity .5s ease, -webkit-transform .5s ease;
-  transition: opacity .5s ease, -webkit-transform .5s ease;
-  transition: opacity .5s ease, transform .5s ease;
-  transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
 }
 
 #box #power .power-switch input:checked + .button .power-on,
@@ -825,167 +797,25 @@ body {
   }
 }
 
-#box #power body {
-  background: #1B1A23;
-  height: 100vh;
-  font: 400 16px 'Poppins', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#box #power body .socials {
-  position: fixed;
-  display: block;
-  left: 20px;
-  bottom: 20px;
-}
-
-#box #power body .socials > a {
-  display: block;
-  width: 30px;
-  opacity: .2;
-  -webkit-transform: scale(var(--scale, 0.8));
-          transform: scale(var(--scale, 0.8));
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
-  transition: -webkit-transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
-  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
-  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91), -webkit-transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
-}
-
-#box #power body .socials > a:hover {
-  --scale: 1;
-}
-
-#box .container {
-  background: #333b46;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #box .box {
-  border-radius: 20px;
-  width: 60px;
-  height: 60px;
-  background: #1a1e24;
-  -webkit-animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1);
-          animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  padding: 30px;
 }
 
 #box .box h1 {
-  padding: 30px;
   font-family: "Bad Script";
-  color: #1a1e24;
+  color: #333b46;
   text-align: center;
   font-size: 30px;
-  font-weight: bold;
-  opacity: 0;
-  -webkit-animation: text-anime 3s;
-          animation: text-anime 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes text-anime {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes text-anime {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes anime {
-  0% {
-    width: 60px;
-    height: 60px;
-  }
-  25% {
-    width: 60px;
-    height: 60px;
-  }
-  50% {
-    width: 60px;
-    height: 240px;
-  }
-  100% {
-    width: 480px;
-    height: 240px;
-  }
-}
-
-@keyframes anime {
-  0% {
-    width: 60px;
-    height: 60px;
-  }
-  25% {
-    width: 60px;
-    height: 60px;
-  }
-  50% {
-    width: 60px;
-    height: 240px;
-  }
-  100% {
-    width: 480px;
-    height: 240px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #box {
-    top: 250px;
-    padding-top: 100px;
-  }
 }
 
 #arrow {
   position: relative;
-  height: 100px;
-  top: 150px;
-  padding: 100px 0;
+  height: 200px;
 }
 
 #arrow .arrows {
   width: 60px;
-  height: 72px;
+  height: 100px;
   position: absolute;
   left: 50%;
   margin-left: -30px;
@@ -995,7 +825,7 @@ body {
 #arrow .arrows path {
   stroke: #de4747;
   fill: transparent;
-  stroke-width: 1px;
+  stroke-width: 5px;
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }
@@ -1046,11 +876,5 @@ body {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */
-}
-
-@media screen and (max-width: 500px) {
-  #arrow {
-    top: 400px;
-  }
 }
 /*# sourceMappingURL=Style.css.map */

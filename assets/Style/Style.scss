@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Bad+Script);
 #love_heart {
+    height: 300px;
     h1 {
         position: relative;
         top: 180px;
@@ -166,22 +167,19 @@ body {
 }
 
 #switch {
+    position: relative;
+    height: 300px;
     .toggleWrapper {
+        box-sizing: border-box;
         position: absolute;
-        top: 35%;
+        top: 50%;
         left: 50%;
         overflow: hidden;
-        padding: 0 200px;
+        padding: 150px;
         transform: translate3d(-50%, -50%, 0);
         input {
             position: absolute;
             left: -99em;
-        }
-    }
-    @media screen and (max-width:500px) {
-        .toggleWrapper {
-            margin: 100px 0;
-            padding: 100px;
         }
     }
     .toggle {
@@ -375,6 +373,8 @@ body {
 }
 
 #box {
+    position: relative;
+    margin: 100px 0;
     #power {
         display: flex;
         justify-content: center;
@@ -395,18 +395,20 @@ body {
                 justify-content: center;
                 align-items: center;
                 position: relative;
-                &:after {
-                    content: "";
-                    width: 500%;
-                    height: 500%;
-                    position: absolute;
-                    background: radial-gradient(circle closest-side, var(--color-invert), transparent);
-                    filter: blur(20px);
-                    opacity: 0;
-                    transition: opacity 1s ease, transform 1s ease;
-                    transform: perspective(1px) translateZ(0);
-                    backface-visibility: hidden;
-                }
+                // &:after {
+                //     content: "";
+                //     max-width: max-content;
+                //     max-height: max-content;
+                //     width: 100%;
+                //     height: 100%;
+                //     position: absolute;
+                //     background: radial-gradient(circle closest-side, var(--color-invert), transparent);
+                //     filter: blur(20px);
+                //     opacity: 0;
+                //     transition: opacity 1s ease, transform 1s ease;
+                //     transform: perspective(1px) translateZ(0);
+                //     backface-visibility: hidden;
+                // }
                 .power-on,
                 .power-off {
                     height: 100%;
@@ -451,12 +453,12 @@ body {
                 opacity: 0;
                 &:checked {
                     +.button {
-                        &:after {
-                            opacity: 0.15;
-                            transform: scale(2) perspective(1px) translateZ(0);
-                            backface-visibility: hidden;
-                            transition: opacity .5s ease, transform .5s ease;
-                        }
+                        // &:after {
+                        //     opacity: 0.15;
+                        //     transform: scale(2) perspective(1px) translateZ(0);
+                        //     backface-visibility: hidden;
+                        //     transition: opacity .5s ease, transform .5s ease;
+                        // }
                         .power-on,
                         .power-off {
                             animation: click-animation .3s ease forwards;
@@ -514,108 +516,24 @@ body {
                 transform: scale(1);
             }
         }
-        //--- ## BASIC #############
-        body {
-            background: #1B1A23;
-            height: 100vh;
-            font: 400 16px 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .socials {
-                position: fixed;
-                display: block;
-                left: 20px;
-                bottom: 20px;
-                >a {
-                    display: block;
-                    width: 30px;
-                    opacity: .2;
-                    transform: scale(var(--scale, .8));
-                    transition: transform .3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
-                    &:hover {
-                        --scale: 1;
-                    }
-                }
-            }
-        }
-    }
-    position: relative;
-    margin-top: 200px;
-    margin-bottom: 500px;
-    .container {
-        background: #333b46;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .box {
-        border-radius: 20px;
-        width: 60px;
-        height: 60px;
-        background: #1a1e24;
-        animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1);
-        animation-fill-mode: forwards;
+        padding: 30px;
         h1 {
-            padding: 30px;
             font-family: "Bad Script";
-            color: #1a1e24;
+            color: #333b46;
             text-align: center;
             font-size: 30px;
-            font-weight: bold;
-            opacity: 0;
-            animation: text-anime 3s;
-            animation-fill-mode: forwards;
         }
-        @keyframes text-anime {
-            0% {
-                opacity: 0;
-            }
-            75% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    }
-    @keyframes anime {
-        0% {
-            width: 60px;
-            height: 60px;
-        }
-        25% {
-            width: 60px;
-            height: 60px;
-        }
-        50% {
-            width: 60px;
-            height: 240px;
-        }
-        100% {
-            width: 480px;
-            height: 240px;
-        }
-    }
-}
-
-@media screen and (max-width:500px) {
-    #box {
-        top: 250px;
-        padding-top: 100px;
     }
 }
 
 #arrow {
     position: relative;
-    height: 100px;
-    top: 150px;
-    padding: 100px 0;
+    height: 200px;
     .arrows {
         width: 60px;
-        height: 72px;
+        height: 100px;
         position: absolute;
         left: 50%;
         margin-left: -30px;
@@ -624,7 +542,7 @@ body {
     .arrows path {
         stroke: #de4747;
         fill: transparent;
-        stroke-width: 1px;
+        stroke-width: 5px;
         animation: arrow 2s infinite;
         -webkit-animation: arrow 2s infinite;
     }
@@ -671,11 +589,5 @@ body {
         animation-delay: 0s;
         -webkit-animation-delay: 0s;
         /* Safari 和 Chrome */
-    }
-}
-
-@media screen and (max-width:500px) {
-    #arrow {
-        top: 400px;
     }
 }
