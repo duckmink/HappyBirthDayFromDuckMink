@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap);
 body {
   background-color: #333b46;
   font-family: 'Helvetica Rounded', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
@@ -952,5 +953,92 @@ body {
     width: 90%;
     margin: 0 5%;
   }
+}
+
+#photos {
+  margin: 100px 0;
+}
+
+#photos .item {
+  width: 50%;
+  position: relative;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+#photos .item1 {
+  background-image: url(../Image/1.png);
+  padding-top: 66%;
+}
+
+#photos .item1:before {
+  content: "Ánh mắt với nụ cười với bờ môi...";
+  font-family: "Open Sans Condensed";
+  color: #de4747;
+  font-size: 5rem;
+  position: absolute;
+  right: -50%;
+  -webkit-transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
+  top: 50%;
+  max-width: 80%;
+}
+
+#photos .item2 {
+  background-image: url(../Image/2.png);
+  padding-top: 66%;
+  left: 50%;
+}
+
+#photos .item2:before {
+  content: "Sự quyến rũ làm tim em bối rối...";
+  font-family: "Open Sans Condensed";
+  color: #de4747;
+  font-size: 5rem;
+  position: absolute;
+  left: -50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  max-width: 80%;
+}
+
+#photos .item3 {
+  background-image: url(../Image/133303495_150716856545677_1310140808780131021_n.jpg);
+  padding-top: 66%;
+}
+
+#photos .item3:before {
+  content: "Mỗi lần chị lướt nhẹ qua em thôi, em nhớ cả ngày cho tới tận đêm tối.";
+  font-family: "Open Sans Condensed";
+  color: #de4747;
+  font-size: 5rem;
+  position: absolute;
+  right: -50%;
+  -webkit-transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
+  top: 50%;
+  max-width: 80%;
+}
+
+#photos .scrollFade {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#photos .scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#photos .scrollFade--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#photos .scrollFade--animate {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 /*# sourceMappingURL=Style.css.map */
