@@ -1038,7 +1038,7 @@ body {
 }
 
 #photos .scrollFade--animate {
-  -webkit-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 /*# sourceMappingURL=Style.css.map */
