@@ -976,7 +976,7 @@ body {
   content: "Ánh mắt với nụ cười với bờ môi...";
   font-family: "Open Sans Condensed";
   color: #de4747;
-  font-size: 70%;
+  font-size: 40px;
   position: absolute;
   right: -50%;
   -webkit-transform: translateX(50%) translateY(-50%);
@@ -995,7 +995,7 @@ body {
   content: "Sự quyến rũ làm tim em bối rối...";
   font-family: "Open Sans Condensed";
   color: #de4747;
-  font-size: 70%;
+  font-size: 40px;
   position: absolute;
   left: -50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -1013,13 +1013,31 @@ body {
   content: "Mỗi lần chị lướt nhẹ qua em thôi, em nhớ cả ngày cho tới tận đêm tối.";
   font-family: "Open Sans Condensed";
   color: #de4747;
-  font-size: 70%;
+  font-size: 40px;
   position: absolute;
   right: -50%;
   -webkit-transform: translateX(50%) translateY(-50%);
           transform: translateX(50%) translateY(-50%);
   top: 50%;
   max-width: 80%;
+}
+
+@media screen and (max-width: 500px) {
+  #photos .item:before {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #photos .item:before {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  #photos .item:before {
+    font-size: 12px;
+  }
 }
 
 #photos .scrollFade {
